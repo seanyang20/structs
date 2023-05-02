@@ -47,8 +47,12 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim
-	jimPointer.updateName("jimmy")
+	// pointer non-shortcut
+	// jimPointer := &jim
+	// jimPointer.updateName("jimmy")
+
+	// pointer shorcut
+	jim.updateName("jimmy")
 	jim.print()
 }
 
@@ -57,8 +61,9 @@ func main() {
 //	func (p person) updateName(newFirstName string) {
 //		p.firstName = newFirstName
 //	}
-//
+
 // after using pointers
+// as long as you have *person in the receivor, you can take in type *person or type person
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 }
