@@ -47,7 +47,7 @@ func main() {
 		},
 	}
 
-	jim.updateName("Jimmy")
+	jim.updateName("jimmy")
 	jim.print()
 }
 
@@ -55,7 +55,7 @@ func (p person) updateName(newFirstName string) {
 	p.firstName = newFirstName
 }
 
-// you can call this function that we are about to define on any type of type person
+// You can call this function that we are about to define on any type of type person
 func (p person) print() {
 	fmt.Printf("%+v", p)
 }
