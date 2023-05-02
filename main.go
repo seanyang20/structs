@@ -47,12 +47,20 @@ func main() {
 		},
 	}
 
-	jim.updateName("jimmy")
+	jimPointer := &jim
+	jimPointer.updateName("jimmy")
 	jim.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+// before using pointers
+//
+//	func (p person) updateName(newFirstName string) {
+//		p.firstName = newFirstName
+//	}
+//
+// after using pointers
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 // You can call this function that we are about to define on any type of type person
